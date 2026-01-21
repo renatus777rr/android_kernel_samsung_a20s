@@ -348,29 +348,6 @@ ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
 #dtbo-$(CONFIG_ARCH_MSM8940) += msm8940-mtp-overlay.dtbo
 #dtbo-$(CONFIG_ARCH_MSM8940) += msm8940-cdp-overlay.dtbo
 
-#dtbo-$(CONFIG_ARCH_MSM8917) += msm8917-mtp-overlay.dtbo \
-	msm8917-qrd-overlay.dtbo \
-	msm8917-cdp-overlay.dtbo \
-	msm8917-cdp-ext-codec-overlay.dtbo \
-	msm8917-cdp-ml-touch-overlay.dtbo \
-	msm8917-rcm-overlay.dtbo \
-	apq8017-mtp-overlay.dtbo \
-	apq8017-cdp-overlay.dtbo \
-	apq8017-cdp-wcd-rome-overlay.dtbo
-
-#dtbo-$(CONFIG_ARCH_QM215) +=qm215-qrd-overlay.dtbo
-#dtbo-$(CONFIG_ARCH_QM215) +=qm215-qrd-smb1360-overlay.dtbo
-
-#dtbo-$(CONFIG_ARCH_MSM8953) += msm8953-mtp-overlay.dtbo \
-	msm8953-cdp-overlay.dtbo \
-	msm8953-rcm-overlay.dtbo \
-	msm8953-ipc-overlay.dtbo \
-	msm8953-qrd-overlay.dtbo \
-	msm8953-iot-mtp-overlay.dtbo \
-	msm8953-ext-codec-mtp-overlay.dtbo \
-	msm8953-ext-codec-rcm-overlay.dtbo \
-	msm8953-cdp-1200p-overlay.dtbo
-
 #dtbo-$(CONFIG_ARCH_SDM450) += msm8953-mtp-overlay.dtbo \
 	msm8953-cdp-overlay.dtbo \
 	msm8953-rcm-overlay.dtbo \
@@ -379,21 +356,6 @@ ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
 	sdm450-cdp-s2-overlay.dtbo \
 	sdm450-mtp-s3-overlay.dtbo \
 	sdm450-qrd-sku4-overlay.dtbo
-
-#dtbo-$(CONFIG_ARCH_SDM632) += sdm632-rumi-overlay.dtbo \
-	sdm450-cdp-s2-overlay.dtbo \
-	sdm450-mtp-s3-overlay.dtbo \
-	sdm632-ext-codec-cdp-s3-overlay.dtbo \
-	sdm632-ext-codec-mtp-s4-overlay.dtbo \
-	sdm632-rcm-overlay.dtbo \
-	sdm450-qrd-sku4-overlay.dtbo \
-	sdm632-qrd-overlay.dtbo
-
-#dtbo-$(CONFIG_ARCH_SDM439) += sdm439-mtp-overlay.dtbo \
-	sdm439-cdp-overlay.dtbo \
-	sdm439-qrd-overlay.dtbo \
-	sdm439-external-codec-mtp-overlay.dtbo \
-	sdm439-rcm-overlay.dtbo
 #-bug426840,wuyuexiu.wt,delete,2019/1/16,project bringup
 
 #bug426840,wuyuexiu.wt,modify,2019/1/16,project bringup
@@ -520,141 +482,14 @@ sdm429-mtp-P81081-overlay.dtbo-base := sdm429.dtb \
 sdm450-pmi632-mtp-s3-S86117AA1.dtbo-base := sdm450-pmi632.dtb \
 	sda450-pmi632.dtb
 else
-dtb-$(CONFIG_ARCH_MSM8953) += msm8953-cdp.dtb \
-	msm8953-mtp.dtb \
-	msm8953-ext-codec-mtp.dtb \
-	msm8953-qrd-sku3.dtb \
-	msm8953-rcm.dtb \
-	apq8053-rcm.dtb \
-	msm8953-ext-codec-rcm.dtb \
-	apq8053-cdp.dtb \
-	apq8053-ipc.dtb \
-	msm8953-ipc.dtb \
-	apq8053-mtp.dtb \
-	apq8053-ext-audio-mtp.dtb \
-	apq8053-ext-codec-rcm.dtb \
-	msm8953-cdp-1200p.dtb \
-	msm8953-iot-mtp.dtb \
-	apq8053-iot-mtp.dtb \
-	apq8053-lite-dragon-v1.0.dtb \
-	apq8053-lite-dragon-v2.0.dtb \
-	apq8053-lite-dragon-v2.1.dtb \
-	apq8053-lite-dragon-v2.2.dtb \
-	apq8053-lite-dragon-v2.2.1.dtb \
-	apq8053-lite-dragon-v2.3.dtb \
-	apq8053-lite-dragon-v2.4.dtb \
-	apq8053-lat-concam-dev.dtb \
-	apq8053-lat-concam-proto.dtb \
-	msm8953-pmi8940-cdp.dtb \
-	msm8953-pmi8940-mtp.dtb \
-	msm8953-pmi8937-cdp.dtb \
-	msm8953-pmi8937-mtp.dtb \
-	msm8953-pmi8940-ext-codec-mtp.dtb \
-	msm8953-pmi8937-ext-codec-mtp.dtb \
-	msm8953-pmi632-cdp-s2.dtb \
-	apq8053-batcam.dtb
-
-dtb-$(CONFIG_ARCH_MSM8937) += msm8937-pmi8950-mtp.dtb \
-	msm8937-interposer-sdm439-cdp.dtb \
-	msm8937-interposer-sdm439-mtp.dtb \
-	msm8937-interposer-sdm439-qrd.dtb \
-	msm8937-interposer-sdm429-cdp.dtb \
-	msm8937-interposer-sdm429-mtp.dtb
-
-dtb-$(CONFIG_ARCH_MSM8940) += msm8940-pmi8937-mtp.dtb \
-	msm8940-pmi8950-mtp.dtb \
-	msm8940-pmi8940-mtp.dtb
-
-dtb-$(CONFIG_ARCH_MSM8917) += msm8917-pmi8950-mtp.dtb \
-	msm8917-pmi8950-cdp.dtb \
-	msm8917-pmi8950-rcm.dtb \
-	msm8917-pmi8950-ext-codec-cdp.dtb \
-	msm8917-pmi8950-cdp-mirror-lake-touch.dtb \
-	apq8017-pmi8950-cdp-wcd-rome.dtb \
-	apq8017-pmi8950-mtp.dtb \
-	apq8017-pmi8950-cdp.dtb \
-	msm8917-pmi8937-qrd-sku5.dtb \
-	msm8917-pmi8937-mtp.dtb \
-	msm8917-pmi8937-cdp.dtb \
-	msm8917-pmi8937-rcm.dtb \
-	apq8017-pmi8937-mtp.dtb \
-	apq8017-pmi8937-cdp.dtb \
-	apq8017-pmi8937-cdp-wcd-rome.dtb \
-	msm8917-pmi8940-mtp.dtb \
-	msm8917-pmi8940-cdp.dtb \
-	msm8917-pmi8940-rcm.dtb
-
-dtb-$(CONFIG_ARCH_QM215) += qm215-qrd.dtb \
-	qcm2150-qrd.dtb
-dtb-$(CONFIG_ARCH_QM215) += qm215-qrd-smb1360.dtb
-
-dtb-$(CONFIG_ARCH_MSM8909) += msm8909-pm8916-mtp.dtb \
-	sdw3100-msm8909w-wtp.dtb \
-	sdw3100-apq8009w-wtp.dtb \
-	sdw3100-apq8009w-alpha.dtb \
-	apq8009-mtp-wcd9326-refboard.dtb \
-	apq8009-robot-som-refboard.dtb \
-	apq8009-robot-rome-refboard.dtb \
-	apq8009-robot-pronto-refboard.dtb \
-	apq8009-dragon.dtb \
-	apq8009-lat-v1.0.dtb \
-	sdw3100-msm8909w-1gb-wtp.dtb \
-	sdw2500-apq8009w-wtp.dtb \
-	sdw2500-msm8909w-wtp.dtb \
-	msm8905-qrd-skub_qseev4.dtb \
-	msm8905-qrd-skub.dtb \
-	msm8905-qrd-sku3.dtb \
-	msm8909-mtp.dtb \
-	msm8909-1gb-mtp.dtb
-
 dtb-$(CONFIG_ARCH_SDM450) += sdm450-rcm.dtb \
-	sdm450-cdp.dtb \
-	sdm450-mtp.dtb \
-	sda450-cdp.dtb \
-	sda450-mtp.dtb \
-	sdm450-qrd.dtb \
-	sdm450-pmi8940-mtp.dtb \
-	sdm450-pmi8937-mtp.dtb \
-	sdm450-iot-mtp.dtb \
-	sdm450-qrd-sku4.dtb \
-	sdm450-pmi632-cdp-s2.dtb \
-	sdm450-pmi632-mtp-s3.dtb \
-	sda450-pmi632-cdp-s2.dtb \
-	sda450-pmi632-mtp-s3.dtb
-
-dtb-$(CONFIG_ARCH_SDM632) += sdm632-rumi.dtb \
-	sdm632-cdp-s2.dtb \
-	sdm632-ext-codec-cdp-s3.dtb \
-	sdm632-mtp-s3.dtb \
-	sdm632-ext-codec-mtp-s4.dtb \
-	sdm632-rcm.dtb \
-	sdm632-qrd-sku4.dtb \
-	sdm632-qrd.dtb \
-	sdm632-pm8004-cdp-s2.dtb \
-	sdm632-pm8004-ext-codec-cdp-s3.dtb \
-	sdm632-pm8004-mtp-s3.dtb \
-	sdm632-pm8004-ext-codec-mtp-s4.dtb \
-	sdm632-pm8004-rcm.dtb \
-	sdm632-pm8004-qrd-sku4.dtb \
-	sdm632-pm8004-qrd.dtb
-
-dtb-$(CONFIG_ARCH_SDM439) += sdm439-mtp.dtb \
-	sdm439-cdp.dtb \
-	sdm439-qrd.dtb \
-	sda439-mtp.dtb \
-	sda439-cdp.dtb \
-	sdm439-external-codec-mtp.dtb \
-	sdm439-rcm.dtb \
-	qm215-qrd.dtb \
-	qcm2150-qrd.dtb \
-	qm215-qrd-smb1360.dtb
+    sda450-pmi632.dts \
+    sdm450-pmi632.dts \
+    sdm450-pmi632-mtp-s3-S86117AA1.dts
 
 #bug426840,wuyuexiu.wt,delete,2019/1/16,project bringup
-dtb-$(CONFIG_ARCH_SDM429) += sdm429-mtp.dtb
 
 endif
-
-dtb-$(CONFIG_ARCH_SDM845_VM) += sdm845-vm.dtb
 
 always		:= $(dtb-y)
 subdir-y	:= $(dts-dirs)
