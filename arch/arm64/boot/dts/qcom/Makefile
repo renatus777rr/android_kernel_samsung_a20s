@@ -402,15 +402,6 @@ apq8017-cdp-wcd-rome-overlay.dtbo-base := apq8017-pmi8950.dtb \
 qm215-qrd-overlay.dtbo-base := qm215.dtb
 qcm2150-qrd-overlay.dtbo-base := qcm2150.dtb
 qm215-qrd-smb1360-overlay.dtbo-base := qm215.dtb
-
-msm8953-mtp-overlay.dtbo-base := sdm450.dtb \
-	msm8953.dtb \
-	apq8053.dtb \
-	sda450.dtb \
-	msm8953-pmi8940.dtb \
-	msm8953-pmi8937.dtb \
-	sdm450-pmi8940.dtb \
-	sdm450-pmi8937.dtb
 msm8953-cdp-overlay.dtbo-base := sdm450.dtb \
 	msm8953.dtb \
 	apq8053.dtb \
@@ -482,7 +473,7 @@ sdm429-mtp-P81081-overlay.dtbo-base := sdm429.dtb \
 sdm450-pmi632-mtp-s3-S86117AA1.dtbo-base := sdm450-pmi632.dtb \
 	sda450-pmi632.dtb
 else
-dtb-$(CONFIG_ARCH_SDM450) += sdm450-rcm.dtb \
+dtb-$(CONFIG_ARCH_SDM450) += sdm450-pmi632.dts \
     sda450-pmi632.dts \
     sdm450-pmi632.dts \
     sdm450-pmi632-mtp-s3-S86117AA1.dts
