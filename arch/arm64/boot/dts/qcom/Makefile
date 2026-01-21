@@ -473,10 +473,9 @@ sdm429-mtp-P81081-overlay.dtbo-base := sdm429.dtb \
 sdm450-pmi632-mtp-s3-S86117AA1.dtbo-base := sdm450-pmi632.dtb \
 	sda450-pmi632.dtb
 else
-dtb-$(CONFIG_ARCH_SDM450) += sdm450-pmi632.dts \
-    sda450-pmi632.dts \
-    sdm450-pmi632.dts \
-    sdm450-pmi632-mtp-s3-S86117AA1.dts
+dtb-$(CONFIG_ARCH_SDM450) += sdm450-pmi632.dtb \
+    sda450-pmi632.dtb \
+    sdm450-pmi632-mtp-s3-S86117AA1.dtb
 
 #bug426840,wuyuexiu.wt,delete,2019/1/16,project bringup
 
