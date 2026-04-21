@@ -360,17 +360,6 @@ ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
 
 #dtbo-$(CONFIG_ARCH_QM215) +=qm215-qrd-overlay.dtbo
 #dtbo-$(CONFIG_ARCH_QM215) +=qm215-qrd-smb1360-overlay.dtbo
-
-#dtbo-$(CONFIG_ARCH_MSM8953) += msm8953-mtp-overlay.dtbo \
-	msm8953-cdp-overlay.dtbo \
-	msm8953-rcm-overlay.dtbo \
-	msm8953-ipc-overlay.dtbo \
-	msm8953-qrd-overlay.dtbo \
-	msm8953-iot-mtp-overlay.dtbo \
-	msm8953-ext-codec-mtp-overlay.dtbo \
-	msm8953-ext-codec-rcm-overlay.dtbo \
-	msm8953-cdp-1200p-overlay.dtbo
-
 #dtbo-$(CONFIG_ARCH_SDM450) += msm8953-mtp-overlay.dtbo \
 	msm8953-cdp-overlay.dtbo \
 	msm8953-rcm-overlay.dtbo \
